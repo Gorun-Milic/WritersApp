@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="40dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Register"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:id="@+id/txtRegister"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Name"
+                android:textColorHint="@color/white"
+                android:id="@+id/edtName"
+                android:layout_below="@+id/txtRegister"
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Surname"
+                android:textColorHint="@color/white"
+                android:layout_below="@+id/edtName"
+                android:id="@+id/edtSurname"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Email"
+                android:textColorHint="@color/white"
+                android:layout_below="@id/edtSurname"
+                android:id="@+id/edtEmail"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Password"
+                android:textColorHint="@color/white"
+                android:layout_below="@id/edtEmail"
+                android:inputType="textPassword"
+                android:id="@+id/edtPassword"
+                />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/edtPassword"
+                android:background="@color/white"
+                android:id="@+id/genderSpinner"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/red"
+                android:textColor="@color/white"
+                android:text="Register"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/genderSpinner"
+                android:id="@+id/btnRegister"
+                android:onClick="register"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:text="Already Registered?"
+                android:textColor="@color/white"
+                android:id="@+id/txtAlreadyRegistered"
+                android:layout_below="@id/btnRegister"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:text="Login here"
+                android:textStyle="italic"
+                android:id="@+id/txtLoginHere"
+                android:layout_below="@id/txtAlreadyRegistered"
+                android:onClick="goToMainActivity"
+                />
+
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+</RelativeLayout>

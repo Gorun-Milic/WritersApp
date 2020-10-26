@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/layoutNavigation">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:backgroundTint="@color/darkblue"
+            android:textColor="#ffff"
+            android:id="@+id/btnFirstTab"
+            android:layout_weight="30"
+            android:onClick="openFirstTab"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:backgroundTint="@color/lightblue"
+            android:textColor="@color/darkblue"
+            android:id="@+id/btnSecondTab"
+            android:layout_weight="30"
+            android:onClick="openSecondTab"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember"
+            android:backgroundTint="@color/lightblue"
+            android:textColor="@color/darkblue"
+            android:id="@+id/btnThirdTab"
+            android:layout_weight="30"
+            android:onClick="openThirdTab"
+            />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/layoutNavigation"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@color/lightblue"
+            android:paddingBottom="60dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/darkblue"
+                android:id="@+id/txtTitle"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtTitle"
+                android:background="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:id="@+id/edtTitle"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:layout_below="@id/edtTitle"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="20dp"
+                android:textColor="@color/darkblue"
+                android:id="@+id/txtCategory"
+                />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@id/txtCategory"
+                android:background="@color/white"
+                android:id="@+id/categorySpinner"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Text"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/darkblue"
+                android:layout_below="@+id/categorySpinner"
+                android:id="@+id/txtText"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtText"
+                android:background="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:inputType= "textMultiLine"
+                android:maxLength="10000"
+                android:maxLines="7"
+                android:id="@+id/edtText"
+                android:minLines="7"
+                android:padding="5dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/green"
+                android:layout_below="@+id/edtText"
+                android:id="@+id/btnSaveStory"
+                android:onClick="saveStory"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Delete"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/red"
+                android:layout_below="@+id/edtText"
+                android:layout_toRightOf="@+id/btnSaveStory"
+                android:id="@+id/btnDeleteStory"
+                android:onClick="deleteStory"
+                />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

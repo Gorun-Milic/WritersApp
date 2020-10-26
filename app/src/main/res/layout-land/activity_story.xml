@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/layoutNavigation">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:backgroundTint="@color/lightblue"
+            android:textColor="@color/darkblue"
+            android:id="@+id/btnFirstTab"
+            android:layout_weight="30"
+            android:onClick="openFirstTab"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:backgroundTint="@color/darkblue"
+            android:textColor="@color/white"
+            android:id="@+id/btnSecondTab"
+            android:layout_weight="30"
+            android:onClick="openSecondTab"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember"
+            android:backgroundTint="@color/lightblue"
+            android:textColor="@color/darkblue"
+            android:id="@+id/btnThirdTab"
+            android:layout_weight="30"
+            android:onClick="openThirdTab"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/layoutNavigation"
+        >
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/storyLayout"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/lightblue"
+                android:paddingBottom="30dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:textSize="30dp"
+                    android:textColor="@color/darkblue"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/txtStoryTitle"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature"
+                    android:textColor="@color/darkblue"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/txtStoryTitle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:id="@+id/txtStoryText"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Author:  "
+                    android:textColor="@color/darkblue"
+                    android:textStyle="italic"
+                    android:layout_below="@+id/txtStoryText"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/txtStoryAuthorName"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type:  "
+                    android:textColor="@color/darkblue"
+                    android:layout_below="@+id/txtStoryAuthorName"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="40dp"
+                    android:id="@+id/txtStoryCategory"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/layoutButtons"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/txtStoryCategory"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/darkblue"
+                        android:id="@+id/txtNumberOfLikes"
+                        />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Like"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/white"
+                        android:id="@+id/btnLikeStory"
+                        android:onClick="likeOrUnlike"
+                        />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Remember"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/white"
+                        android:id="@+id/btnRememberStory"
+                        android:onClick="rememberOrForget"
+                        />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/commentLayout"
+            android:background="@color/lightblue"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@+id/storyLayout"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comments"
+                android:textColor="@color/darkblue"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:id="@+id/txtComments"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/commentFormLayout"
+                android:layout_below="@+id/txtComments"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                >
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Add Comment"
+                    android:background = "@color/white"
+                    android:id="@+id/edtAddComment"
+                    android:layout_weight="80"
+                    android:layout_marginRight="5dp"
+                    android:paddingTop="3dp"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:paddingBottom="3dp"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send"
+                    android:backgroundTint="@color/red"
+                    android:textColor="@color/white"
+                    android:id="@+id/btnAddComment"
+                    android:layout_weight="15"
+                    android:onClick="addComment"
+                    />
+
+            </LinearLayout>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/blue"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/commentFormLayout"
+                android:id="@+id/commentList"
+                />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

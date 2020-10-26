@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/blue"
+    >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="40dp">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log In"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:id="@+id/txtLogIn"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:textColorHint="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/txtLogIn"
+                android:id="@+id/edtLoginEmail"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Password"
+                android:textColorHint="@color/white"
+                android:inputType="textPassword"
+                android:layout_below="@+id/edtLoginEmail"
+                android:id="@+id/edtLoginPassword"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/red"
+                android:textColor="@color/white"
+                android:text="Log in"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/edtLoginPassword"
+                android:id="@+id/btnLogin"
+                android:onClick="login"
+                />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="Not Registered?"
+                    android:textColor="@color/white"
+                    android:id="@+id/txtNotRegistered"
+                    android:layout_below="@id/btnLogin"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="Register here"
+                    android:textStyle="italic"
+                    android:id="@+id/txtRegister"
+                    android:layout_below="@id/txtNotRegistered"
+                    android:onClick="goToRegisterActivity"
+                    />
+
+
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+</RelativeLayout>

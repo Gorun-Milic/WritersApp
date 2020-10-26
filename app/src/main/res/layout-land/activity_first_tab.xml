@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/layoutNavigation">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:backgroundTint="@color/darkblue"
+            android:textColor="#ffff"
+            android:id="@+id/btnFirstTab"
+            android:layout_weight="30"
+            android:onClick="openFirstTab"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:backgroundTint="@color/lightblue"
+            android:textColor="@color/darkblue"
+            android:id="@+id/btnSecondTab"
+            android:layout_weight="30"
+            android:onClick="openSecondTab"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember"
+            android:backgroundTint="@color/lightblue"
+            android:textColor="@color/darkblue"
+            android:id="@+id/btnThirdTab"
+            android:layout_weight="30"
+            android:onClick="openThirdTab"
+            />
+
+    </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layoutNavigation"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutTop"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="30dp"
+                android:background="@color/lightblue"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/lightblue"
+                    android:id="@+id/layoutUserImage"
+                    >
+
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:src="@mipmap/m11"
+                        android:id="@+id/imgUser"
+                        />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:background="@color/lightblue"
+                    android:id="@+id/layoutUserData"
+                    android:layout_toRightOf="@+id/layoutUserImage"
+
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name: "
+                        android:textColor="@color/darkblue"
+                        android:id="@+id/txtName"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Surname: "
+                        android:textColor="@color/darkblue"
+                        android:id="@+id/txtSurname"
+                        android:layout_below="@id/txtName"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Email: "
+                        android:textColor="@color/darkblue"
+                        android:id="@+id/txtEmail"
+                        android:layout_below="@id/txtSurname"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Gender: "
+                        android:textColor="@color/darkblue"
+                        android:id="@+id/txtGender"
+                        android:layout_below="@id/txtEmail"
+                        />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/layoutTop"
+                android:id="@+id/layoutBottom"
+                android:padding="30dp"
+                android:background="@color/lightblue"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Write Story"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/red"
+                    android:id="@+id/btnWriteStory"
+                    android:onClick="writeStory"
+                    />
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/btnWriteStory"
+                    android:id="@+id/storiesList"
+                    android:background="@color/blue"
+
+                    />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

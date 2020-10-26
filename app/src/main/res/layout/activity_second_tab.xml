@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/layoutNavigation">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:backgroundTint="@color/lightblue"
+            android:textColor="@color/darkblue"
+            android:id="@+id/btnFirstTab"
+            android:layout_weight="30"
+            android:onClick="openFirstTab"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:backgroundTint="@color/darkblue"
+            android:textColor="@color/white"
+            android:id="@+id/btnSecondTab"
+            android:layout_weight="30"
+            android:onClick="openSecondTab"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember"
+            android:backgroundTint="@color/lightblue"
+            android:textColor="@color/darkblue"
+            android:id="@+id/btnThirdTab"
+            android:layout_weight="30"
+            android:onClick="openThirdTab"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@color/lightblue"
+        android:layout_below="@+id/layoutNavigation"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:padding="3dp"
+            android:background="@color/white"
+            android:hint="Search"
+            android:id="@+id/edtSearch"
+            />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/edtSearch"
+            android:id="@+id/categorySpinnerSearch"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Search"
+            android:backgroundTint="@color/red"
+            android:textColor="@color/white"
+            android:layout_below="@id/categorySpinnerSearch"
+            android:id="@+id/btnSearch"
+            android:onClick="search"
+            />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:background="@color/blue"
+            android:id="@+id/allStoriesList"
+            android:layout_below="@id/btnSearch"
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
